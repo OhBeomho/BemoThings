@@ -1,0 +1,104 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap);
+
+html,
+body {
+	margin: 0;
+	font-family: "Roboto", sans-serif;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	animation: intro 0.5s forwards;
+}
+
+.view {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.3);
+	display: none;
+}
+
+.view > * {
+	position: absolute;
+}
+
+.view canvas {
+	display: block;
+	background-color: black;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	width: 80vw;
+	height: 80vh;
+}
+
+#close {
+	top: 0;
+	right: 0;
+	background-color: transparent;
+	border: 0;
+	padding: 10px;
+	margin: 5px;
+	font-size: 25px;
+	font-weight: bold;
+	color: white;
+}
+
+#close:hover {
+	color: red;
+}
+
+.things div:nth-child(1) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+}
+
+.things div:nth-child(2) {
+	margin-top: 15px;
+	text-align: center;
+}
+
+.thing {
+	width: 10vw;
+	height: 10vw;
+	min-width: 150px;
+	min-height: 150px;
+	border-radius: 50%;
+	background-image: url(../images/preview_images.png);
+	background-size: cover;
+	background-position: 0 0;
+	transition: all 0.2s;
+}
+
+#previous,
+#next {
+	border: 0;
+	padding: 5px;
+	background-color: transparent;
+	font-size: 20px;
+	padding: 10px;
+}
+
+#previous:hover,
+#next:hover {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+@keyframes intro {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
